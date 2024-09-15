@@ -1,0 +1,54 @@
+<div class="container mt-5">
+    <div class="card">
+        <div class="row">
+            <div class="col-6 ">
+                <div class="mt-1 ml-2">
+                    <form #productForm="ngForm" (ngSubmit)="addProduct(productForm)">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Book Name</mat-label>
+                            <input matInput 
+                            placeholder="Book Name"
+                            [(ngModel)]="product.productName"
+                            name="productName">
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Book Description</mat-label>
+                            <input matInput 
+                            placeholder="Book Description"
+                            [(ngModel)]="product.productDescription"
+                            name="productDescription" >
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Book Actual Price</mat-label>
+                            <input matInput 
+                            placeholder="Book Actual Price"
+                            [(ngModel)]="product.productPrice"
+                            name="productPrice">
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Book Discounted Price</mat-label>
+                            <input matInput 
+                            placeholder="Book Discounted Price"
+                            [(ngModel)]="product.productDiscount"
+                            name="productDiscount">
+                        </mat-form-field>
+
+                        <div align="end">
+                            <button mat-stroked-button color="warn" style="margin-right: 3px;">Cancel</button>
+                            <button type="submit" mat-stroked-button color="primary">Add New Product</button>
+                            
+
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+            <div class="col-6">
+                image upload
+            </div>
+
+        </div>
+
+    </div>
+</div>
